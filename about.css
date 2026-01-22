@@ -1,0 +1,412 @@
+.main-header {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top .6s ease, background .4s ease;
+}
+
+.main-header.show {
+  top: 0;
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(14px);
+  border-radius: 0 0 24px 24px;
+}
+
+/* LOGO */
+.nav-logo a {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .35em;
+  font-size: .9rem;
+  text-decoration: none;
+}
+.nav-logo img {
+  height: 34px;           /* ukuran ideal navbar */
+  width: auto;
+  display: block;
+  filter: brightness(1); /* aman untuk dark mode */
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  gap: 36px;
+}
+
+.nav-menu a {
+  color: #000000;
+  text-decoration: none;
+  font-size: .85rem;
+  letter-spacing: .15em;
+  opacity: .75;
+  position: relative;
+  transition: opacity .3s ease;
+}
+
+.nav-menu a:hover {
+  opacity: 1;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #000000;
+  transition: width .3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* CTA */
+.nav-btn {
+  border: 1px solid rgba(0, 0, 0, 0.674);
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: .8rem;
+  margin-right: auto;
+  text-decoration: none;
+  color: #000000;
+  transition: all .3s ease;
+}
+
+
+.nav-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+/* =========================
+   ABOUT PAGE — ADIMARA STUDIO
+   ========================= */
+
+/* ROOT */
+.about-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem 8rem;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  line-height: 1.7;
+}
+
+/* EYEBROW */
+.section-eyebrow {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+/* PAGE TITLE */
+.page-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+}
+
+/* SECTION */
+.about-section {
+  margin-bottom: 6rem;
+}
+
+/* PARAGRAPH */
+.about-section p {
+  font-size: 1.05rem;
+  max-width: 820px;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* STRONG */
+.about-section strong {
+  font-weight: 600;
+  color: #000;
+}
+
+/* DIVIDER */
+.about-divider {
+  width: 120px;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 3rem 0;
+}
+
+/* SECTION TITLES */
+.about-section h2,
+.about-section h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.about-section h3 {
+  font-size: 1.3rem;
+  margin-top: 3rem;
+}
+
+/* SUBTITLE */
+.section-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+/* QUOTE */
+.about-quote {
+  font-style: italic;
+  color: #555;
+  border-left: 3px solid #ddd;
+  padding-left: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+/* IMAGE */
+.about-image {
+  margin-top: 3rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.about-image img:hover {
+  filter: grayscale(0%);
+}
+
+/* LIST */
+.about-points {
+  list-style: none;
+  padding-left: 0;
+  max-width: 820px;
+}
+
+.about-points li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.about-points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+
+/* CLOSING */
+.about-closing {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.about-closing h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.about-closing p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.8rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .page-title {
+    margin-bottom: 3rem;
+  }
+
+  .about-section {
+    margin-bottom: 4rem;
+  }
+
+  .about-closing h2 {
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   FOOTER – CINEMATIC
+========================= */
+
+.site-footer {
+  background: #ffffff;
+  color: #000000;
+  padding: 6rem 0 0rem;
+  font-size: 0.85rem;
+}
+
+.footer-grid {
+  
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 9rem;
+  justify-items: center;
+  text-align: left;
+}
+
+
+
+/* ABOUT */
+.footer-about h3 {
+  color: #000000;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2rem;
+}
+
+.footer-about p {
+  line-height: 1.8;
+  max-width: 360px;
+}
+
+/* LINKS */
+.footer-links h4,
+.footer-social h4 {
+  color: #000000;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.footer-links a:hover {
+  color: #cbb26a;
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  transition: color 0.4s ease;
+}
+
+.social-icons a:hover {
+  color: #cbb26a;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 2.4rem;
+  padding: 1.2rem 0 0; /* VALID & TERKONTROL */
+  border-top: 1px solid rgba(0,0,0,0.12);
+
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: #777;
+}
+body {
+  margin: auto;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.45s cubic-bezier(0.22,1,0.36,1);
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.6;
+}
+
+.social-icons a:hover {
+  background: #cbb26a;
+  border-color: #cbb26a;
+  transform: translateY(-3px);
+}
+
+.social-icons a:hover svg {
+  stroke: #0e0e0e;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+}
